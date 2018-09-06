@@ -1,0 +1,52 @@
+
+<head>
+<style>
+.wrapper {
+  position: relative;
+  width: 174px;
+  margin-bottom: 20px;
+}
+
+.toggler-ico {
+  border: none;
+  background: none;
+  padding: 0;
+  width: 15px;
+    
+  position: absolute;
+  right: 5px;
+  top: 5px;
+}
+</style>
+</head>
+<body>
+	<div class="wrapper">
+		<input type="password" id="password">
+		<button id="toggleBtn" class="glyphicon glyphicon-eye-open toggler-ico" type="button">&nbsp;</button>
+	</div>
+	<script>
+	var open = 'glyphicon-eye-open';
+var close = 'glyphicon-eye-close';
+var ele = document.getElementById('password');
+
+
+document.getElementById('toggleBtn').onmousedown = function() {
+	
+  	ele.type="text";
+    this.classList.remove(open);
+    this.className += ' '+close;
+
+}
+
+document.getElementById('toggleBtn').onmouseup = function() {
+
+  	ele.type="password";
+    this.classList.remove(close);
+    this.className += ' '+open;
+  
+}
+
+
+
+	</script>
+</body>
